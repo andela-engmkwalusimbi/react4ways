@@ -1,8 +1,9 @@
-import { FETCHING_DATA } from './constants';
+import { FETCH_DATA } from './constants';
+import getPeople from './api';
 
-
-export const fetchData = () => {
-    return {
-        type: FETCHING_DATA
-    }
+export function fetchData() {
+  return {
+    type: FETCH_DATA,
+    payload: getPeople()
+  }
 }
